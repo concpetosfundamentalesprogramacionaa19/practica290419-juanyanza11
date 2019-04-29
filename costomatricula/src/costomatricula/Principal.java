@@ -21,15 +21,15 @@ public class Principal {
         Scanner entrada = new Scanner (System.in);
        
                 
-        String lugar;
-        int edad, estado, cargas;
+        
+        int edad, estado, cargas, lugar;
         double costoi = 1330;
-        double matF, mat;
-        double d1, d2, d3, d4, tramite;
+        double matF;
+        double d1, d2, d3, d4;
         // PEDIR DATOS
         
-        System.out.println("Ingrese su localidad o ciudad");
-            lugar = entrada.nextLine();
+        System.out.println("Ingrese su localidad o ciudad\n1.Loja\n2.Zamora \n3.Otro.");
+            lugar = entrada.nextInt();
         System.out.println("Ingrese su edad");
             edad = entrada.nextInt();
         System.out.println("Ingrese su estado civil\n1.Casado\n2.Soltero");
@@ -44,7 +44,7 @@ public class Principal {
         double descT= Porcentajes.porcentajeT;
         // Condiciones de descuento
         
-        if (lugar.equals("Loja") || lugar.equals("Zamora")){
+        if (lugar==1 || lugar==2){
             
             d1=descL;
             
@@ -75,9 +75,8 @@ public class Principal {
            d4=0;
        }
        
-       tramite = (1330-d1-d2-d3-d4)*0.02;
        
-       matF=1330-d1-d2-d3-d4+tramite;
+       matF=costoi-d1-d2-d3-d4+(1330-d1-d2-d3-d4)*0.02;
          
        //MUESTRA DE MATRÍCULA
                
