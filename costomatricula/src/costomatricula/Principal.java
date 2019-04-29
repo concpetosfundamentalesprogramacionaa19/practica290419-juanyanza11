@@ -44,7 +44,7 @@ public class Principal {
         double descT= Porcentajes.porcentajeT;
         // Condiciones de descuento
         
-        if ("Loja".equals(lugar) || "Zamora".equals(lugar)){
+        if (lugar.equals("Loja") || lugar.equals("Zamora")){
             
             d1=descL;
             
